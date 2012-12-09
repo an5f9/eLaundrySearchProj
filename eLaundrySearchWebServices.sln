@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLaundrySearchWebServices", "eLaundryWebServices\eLaundrySearchWebServices.csproj", "{C27C7E65-EDF6-4F90-9073-454F575F300D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLaundrySearchWeb", "eLaundrySearchWeb\eLaundrySearchWeb.csproj", "{D78E06EA-68CC-4F6A-BBAF-232F7191837A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElaundrySearchNUnit", "ElaundrySearchNUnit\ElaundrySearchNUnit.csproj", "{A7367946-3286-4247-8461-D0A579E9F584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C27C7E65-EDF6-4F90-9073-454F575F300D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27C7E65-EDF6-4F90-9073-454F575F300D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27C7E65-EDF6-4F90-9073-454F575F300D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27C7E65-EDF6-4F90-9073-454F575F300D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D78E06EA-68CC-4F6A-BBAF-232F7191837A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D78E06EA-68CC-4F6A-BBAF-232F7191837A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D78E06EA-68CC-4F6A-BBAF-232F7191837A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D78E06EA-68CC-4F6A-BBAF-232F7191837A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7367946-3286-4247-8461-D0A579E9F584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7367946-3286-4247-8461-D0A579E9F584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7367946-3286-4247-8461-D0A579E9F584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7367946-3286-4247-8461-D0A579E9F584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

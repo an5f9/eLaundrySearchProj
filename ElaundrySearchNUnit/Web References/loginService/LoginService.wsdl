@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="validateCustomerLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateCustomerLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validateCustomerLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateProviderLogin">
+        <s:complexType />
+      </s:element>
+      <s:element name="validateProviderLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validateProviderLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validateCustomerLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:validateCustomerLogin" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:validateCustomerLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateProviderLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:validateProviderLogin" />
+  </wsdl:message>
+  <wsdl:message name="validateProviderLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:validateProviderLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerLoginHttpGetIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="validateProviderLoginHttpGetIn" />
+  <wsdl:message name="validateProviderLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerLoginHttpPostIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validateCustomerLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="validateProviderLoginHttpPostIn" />
+  <wsdl:message name="validateProviderLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="LoginServiceSoap">
+    <wsdl:operation name="validateCustomerLogin">
+      <wsdl:input message="tns:validateCustomerLoginSoapIn" />
+      <wsdl:output message="tns:validateCustomerLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <wsdl:input message="tns:validateProviderLoginSoapIn" />
+      <wsdl:output message="tns:validateProviderLoginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LoginServiceHttpGet">
+    <wsdl:operation name="validateCustomerLogin">
+      <wsdl:input message="tns:validateCustomerLoginHttpGetIn" />
+      <wsdl:output message="tns:validateCustomerLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <wsdl:input message="tns:validateProviderLoginHttpGetIn" />
+      <wsdl:output message="tns:validateProviderLoginHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LoginServiceHttpPost">
+    <wsdl:operation name="validateCustomerLogin">
+      <wsdl:input message="tns:validateCustomerLoginHttpPostIn" />
+      <wsdl:output message="tns:validateCustomerLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <wsdl:input message="tns:validateProviderLoginHttpPostIn" />
+      <wsdl:output message="tns:validateProviderLoginHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoginServiceSoap" type="tns:LoginServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateCustomerLogin">
+      <soap:operation soapAction="http://tempuri.org/validateCustomerLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <soap:operation soapAction="http://tempuri.org/validateProviderLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoginServiceSoap12" type="tns:LoginServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateCustomerLogin">
+      <soap12:operation soapAction="http://tempuri.org/validateCustomerLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <soap12:operation soapAction="http://tempuri.org/validateProviderLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoginServiceHttpGet" type="tns:LoginServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="validateCustomerLogin">
+      <http:operation location="/validateCustomerLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <http:operation location="/validateProviderLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LoginServiceHttpPost" type="tns:LoginServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="validateCustomerLogin">
+      <http:operation location="/validateCustomerLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateProviderLogin">
+      <http:operation location="/validateProviderLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoginService">
+    <wsdl:port name="LoginServiceSoap" binding="tns:LoginServiceSoap">
+      <soap:address location="http://localhost:50998/LoginService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoginServiceSoap12" binding="tns:LoginServiceSoap12">
+      <soap12:address location="http://localhost:50998/LoginService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoginServiceHttpGet" binding="tns:LoginServiceHttpGet">
+      <http:address location="http://localhost:50998/LoginService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LoginServiceHttpPost" binding="tns:LoginServiceHttpPost">
+      <http:address location="http://localhost:50998/LoginService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
