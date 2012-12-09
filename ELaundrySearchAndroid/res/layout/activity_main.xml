@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#c7d7aa" >
+		<ImageView
+		android:id="@+id/image"
+		android:layout_width = "175dp"
+		android:layout_height= "100dp"
+		android:scaleType="center"
+		android:layout_gravity="center_horizontal|bottom"
+		android:src="@drawable/elaundry_logo_black"
+		>
+		</ImageView>
+    <!--  Email Label -->
+     <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="User Id"/>
+     <EditText android:id="@+id/loginEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:singleLine="true"/>
+     <!--  Email Label -->
+     <!--  Password Label -->
+     <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#372c24"
+                android:text="Password"/>
+
+     <EditText android:id="@+id/loginPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:singleLine="true"
+                android:inputType="textPassword"/>
+     <!--  Password Label -->     
+    
+    <LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:layout_marginLeft="40dp" >
+        </Button>
+        <Button
+            android:id="@+id/fbLogin"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Facebook Login" >
+        </Button>
+        
+    </LinearLayout>
+
+
+
+</LinearLayout>

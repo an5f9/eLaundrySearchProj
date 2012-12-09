@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#c7d7aa" >
+    
+<TextView
+    android:id="@+id/laundryName"
+    android:layout_width="234dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content"
+    android:text="Kansas Laundry"
+    android:textSize="25dp" >
+</TextView>
+
+        <TextView
+            android:id="@+id/address_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#131511"
+            android:text="Address"
+            android:layout_marginTop="10dp"
+            android:textColor="#EEDB0B"
+            android:textSize="25dp" >
+
+        </TextView>
+        <TextView
+            android:id="@+id/address_street"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harrison Street"
+            android:textSize="15dp" >
+        </TextView>
+        <TextView
+            android:id="@+id/address_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kansas city"
+            android:textSize="15dp" >
+        </TextView>
+
+         <TextView
+             android:id="@+id/contact_lbl"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Contact Details"
+             android:background="#131511"
+             android:textColor="#EEDB0B"
+             android:layout_marginTop="10dp"
+            android:textSize="25dp"
+              >
+
+        </TextView>
+        <TextView
+            android:id="@+id/contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kcl@gmail.com"
+            android:textSize="15dp" >
+            
+        </TextView>
+        <TextView
+            android:id="@+id/contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="232-232-5252"
+            android:textSize="15dp" ></TextView>
+
+        <TextView
+            android:id="@+id/Prices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#131511"
+            android:textSize="25dp"
+            android:layout_marginTop="7dp"
+            android:text="Prices"
+            android:textColor="#EEDB0B"
+             >
+
+</TextView>
+        <TextView
+            android:id="@+id/price_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Jeans/Tees: $2 Per Piece"
+            android:textSize="15dp" ></TextView>
+        <TextView
+            android:id="@+id/price_woolen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Woolen : $3 Per Piece"
+            android:textSize="15dp" ></TextView>
+        <TextView
+            android:id="@+id/price_dry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dry Cleaning : $4 Per Piece"
+            android:textSize="15dp" ></TextView>
+        
+<LinearLayout
+        android:id="@+id/LinearLayout03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/placeOrder"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="Place Order" >
+        </Button>
+        <Button
+            android:id="@+id/viewMapButton"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:text="View Map" >
+        </Button>
+    </LinearLayout>
+
+
+</LinearLayout>

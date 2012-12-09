@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="mArrayList">
+        <item>6 AM - 9 AM</item>
+        <item>9 AM - 12 PM</item>
+        <item>12 PM - 3 PM</item>
+        <item>3 PM - 6 PM</item>
+        <item>6 PM - 9 PM</item>
+    </string-array>
+</resources>
